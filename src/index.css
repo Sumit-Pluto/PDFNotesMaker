@@ -190,6 +190,7 @@ input[type=number] {
   font-weight: 700;
   background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: flex;
   align-items: center;
@@ -1424,7 +1425,9 @@ input[type=number] {
 .upload-title {
   font-family: var(--font-heading); font-size: 2rem; font-weight: 800;
   background: linear-gradient(135deg, #9041ff 0%, #5975ff 60%, #9074ff 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: -0.5px;
 }
 
