@@ -342,7 +342,7 @@ export const PackedNotesPreview: React.FC<PackedNotesPreviewProps> = ({
                 style={{
                   flex: 1,
                   padding: '8px 10px',
-                  background: 'rgba(255,255,255,0.05)',
+                  background: 'var(--bg-subtle)',
                   border: '1px solid var(--border-medium)',
                   borderRadius: 'var(--radius-md)',
                   color: 'var(--text-primary)',
@@ -387,7 +387,7 @@ export const PackedNotesPreview: React.FC<PackedNotesPreviewProps> = ({
                   background: color,
                   border: config.pageBackground.toLowerCase() === color.toLowerCase()
                     ? '2.5px solid var(--accent-primary)'
-                    : '1.5px solid rgba(255,255,255,0.2)',
+                    : '1.5px solid var(--border-medium)',
                   borderRadius: '6px',
                   cursor: 'pointer',
                   boxShadow: config.pageBackground.toLowerCase() === color.toLowerCase()
@@ -407,7 +407,7 @@ export const PackedNotesPreview: React.FC<PackedNotesPreviewProps> = ({
               type="color"
               value={config.pageBackground}
               onChange={e => onChangeConfig({ pageBackground: e.target.value })}
-              style={{ width: '28px', height: '28px', border: '1.5px solid rgba(255,255,255,0.2)', borderRadius: '6px', cursor: 'pointer', background: 'none', padding: 0 }}
+              style={{ width: '28px', height: '28px', border: '1.5px solid var(--border-medium)', borderRadius: '6px', cursor: 'pointer', background: 'none', padding: 0 }}
               title="Custom Color"
             />
           </div>
@@ -478,7 +478,7 @@ export const PackedNotesPreview: React.FC<PackedNotesPreviewProps> = ({
                   <img src={snip.dataUrl} alt="Thumb" className="preview-clip-mini-thumb" />
                   
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: '0.72rem', fontWeight: 600, color: '#a5b4fc', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                    <div style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--accent-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                       #{idx + 1} • p.{snip.pageNumber}
                     </div>
                     <div style={{ display: 'flex', gap: '4px', marginTop: '2px', alignItems: 'center' }}>
@@ -641,14 +641,13 @@ export const PackedNotesPreview: React.FC<PackedNotesPreviewProps> = ({
       <main className="preview-canvas-area">
         {/* Floating Zoom Bar */}
         <div
+          className="preview-floating-zoom-bar"
           style={{
             position: 'sticky',
             top: 0,
-            background: 'rgba(14, 20, 32, 0.75)',
             backdropFilter: 'var(--glass-blur)',
             padding: '6px 14px',
             borderRadius: 'var(--radius-full)',
-            border: '1px solid var(--border-subtle)',
             display: 'flex',
             alignItems: 'center',
             gap: '10px',

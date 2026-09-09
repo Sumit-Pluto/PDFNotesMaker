@@ -1081,9 +1081,9 @@ export const PdfViewer: React.FC<PdfViewerProps> = ({
                 className="page-num-input"
                 style={{
                   width: '38px',
-                  background: 'rgba(255,255,255,0.08)',
+                  background: 'var(--bg-subtle)',
                   border: '1px solid var(--border-subtle)',
-                  color: 'white',
+                  color: 'var(--text-primary)',
                   borderRadius: '4px',
                   textAlign: 'center',
                   padding: '2px 4px',
@@ -1272,8 +1272,8 @@ export const PdfViewer: React.FC<PdfViewerProps> = ({
                     gap: '6px',
                     padding: '3px 8px',
                     borderRadius: '6px',
-                    background: 'rgba(255,255,255,0.06)',
-                    border: '1px solid rgba(255,255,255,0.15)',
+                    background: 'var(--bg-subtle)',
+                    border: '1px solid var(--border-subtle)',
                     cursor: 'pointer',
                   }}
                 >
@@ -1323,7 +1323,7 @@ export const PdfViewer: React.FC<PdfViewerProps> = ({
                       </div>
 
                       {/* Divider */}
-                      <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)' }} />
+                      <div style={{ width: '100%', height: '1px', background: 'var(--border-subtle)' }} />
 
                       {/* Stroke Width Slider */}
                       <div>
@@ -1348,7 +1348,7 @@ export const PdfViewer: React.FC<PdfViewerProps> = ({
                           }}
                         />
                         {/* Live Preview Bar */}
-                        <div style={{ marginTop: '8px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.3)', borderRadius: '4px', padding: '0 8px' }}>
+                        <div style={{ marginTop: '8px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-subtle)', borderRadius: '4px', padding: '0 8px' }}>
                           <div
                             style={{
                               width: '100%',
@@ -1577,7 +1577,7 @@ export const PdfViewer: React.FC<PdfViewerProps> = ({
                       fontSize: '0.74rem',
                       color: 'var(--text-muted)',
                       height: '22px',
-                      background: 'rgba(0,0,0,0.4)',
+                      background: 'var(--bg-subtle)',
                       borderRadius: '4px',
                     }}
                     onClick={() => setInlineTextInput(null)}
