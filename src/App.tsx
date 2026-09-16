@@ -5,6 +5,7 @@ import { PdfViewer } from './components/PdfViewer';
 import { SnippetTray } from './components/SnippetTray';
 import { PackedNotesPreview } from './components/PackedNotesPreview';
 import { SnippetModal } from './components/SnippetModal';
+import { AiAssistant } from './components/AiAssistant';
 import { calculatePackedPages } from './services/packingEngine';
 import { exportNotesPdf } from './services/pdfExporter';
 import { saveSessionBackup, loadSavedSession, clearSavedSession, type SavedSession } from './services/storageService';
@@ -534,6 +535,9 @@ export const App: React.FC = () => {
               isExporting={isExporting}
             />
           </div>
+
+          {/* ── AI Assistant: Chat with your PDF ───────────────────────────── */}
+          <AiAssistant activeDocument={activeDocument} />
         </>
       )}
 
