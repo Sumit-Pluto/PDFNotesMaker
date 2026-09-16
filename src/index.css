@@ -3317,7 +3317,7 @@ input[type=number] {
 /* ── Floating launcher (closed state) ─────────────────────────────────────── */
 .ai-fab {
   position: fixed;
-  top: 88px;
+  top: 30vh;               /* upper-middle of the right edge — clears the tray menu */
   right: 18px;
   z-index: 850;
   display: flex;
